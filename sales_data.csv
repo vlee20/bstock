@@ -1,4 +1,4 @@
-date ,transaction_id ,product_id ,quantity ,sale_amount 
+date,transaction_id,product_id,quantity,sale_amount
 2023-03-01,TX001,P001,2,40
 2023-03-01,TX002,P002,1,25
 2023-03-02,TX003,P003,3,45
