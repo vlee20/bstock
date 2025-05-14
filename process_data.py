@@ -18,7 +18,7 @@ export_file = 'aggregated_report.csv'
 SUCCESS = True
 
 check_csv_columns = ['sale_amount', 'quantity', 'transaction_id', 'product_id', 'date']
-check_json_columns = ['product_id', 'category', 'product_name', 'price', 'availability']
+check_json_columns = ['product_id', 'product_name', 'category', 'price', 'availability']
 
 ##########################################
 ########### data ingestion ###############
@@ -41,8 +41,8 @@ for col in check_csv_columns:
         sys.exit()
 # check if the required columns are present in the json dataframe
 for col in check_json_columns:
-    if col not in df_json.columns:
-        print(f"Column '{col}' is missing")
+    if check_json_columns != list(df_json.columns):
+        print("json file has incorrect columns")
         sys.exit()
         
 # check if columns are missing in the csv file
